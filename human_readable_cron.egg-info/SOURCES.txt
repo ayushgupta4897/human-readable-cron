@@ -1,11 +1,14 @@
 LICENSE
+MANIFEST.in
 README.md
+pyproject.toml
+requirements.txt
 setup.py
 human_readable_cron/__init__.py
+human_readable_cron/cli.py
 human_readable_cron/converter.py
 human_readable_cron.egg-info/PKG-INFO
 human_readable_cron.egg-info/SOURCES.txt
 human_readable_cron.egg-info/dependency_links.txt
+human_readable_cron.egg-info/entry_points.txt
 human_readable_cron.egg-info/top_level.txt
-human_readable_cron/tests/__init__.py
-human_readable_cron/tests/test_converter.py
