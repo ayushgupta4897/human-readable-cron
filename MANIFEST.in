@@ -1,0 +1,5 @@
+include LICENSE
+include README.md
+include requirements.txt
+recursive-include human_readable_cron *.py
+recursive-exclude human_readable_cron/tests * 

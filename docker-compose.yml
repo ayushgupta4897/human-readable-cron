@@ -1,0 +1,9 @@
+version: '3'
+
+services:
+  human-readable-cron:
+    build: .
+    stdin_open: true
+    tty: true
+    volumes:
+      - .:/app 

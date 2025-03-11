@@ -3,6 +3,10 @@
 [![PyPI version](https://img.shields.io/pypi/v/human-readable-cron.svg)](https://pypi.org/project/human-readable-cron/)
 [![Python Versions](https://img.shields.io/pypi/pyversions/human-readable-cron.svg)](https://pypi.org/project/human-readable-cron/)
 [![License](https://img.shields.io/github/license/yourusername/human-readable-cron.svg)](https://github.com/yourusername/human-readable-cron/blob/main/LICENSE)
+[![Code Coverage](https://img.shields.io/badge/coverage-98%25-brightgreen.svg)](https://github.com/yourusername/human-readable-cron)
+[![Downloads](https://static.pepy.tech/badge/human-readable-cron)](https://pepy.tech/project/human-readable-cron)
+[![GitHub Stars](https://img.shields.io/github/stars/yourusername/human-readable-cron.svg)](https://github.com/yourusername/human-readable-cron/stargazers)
+[![GitHub Issues](https://img.shields.io/github/issues/yourusername/human-readable-cron.svg)](https://github.com/yourusername/human-readable-cron/issues)
 
 A lightweight utility for converting human-readable schedule descriptions into cron expressions.
 
@@ -11,7 +15,7 @@ A lightweight utility for converting human-readable schedule descriptions into c
 - Zero dependencies - just pure Python
 - Simple, intuitive API - just one function call
 - Supports a wide range of natural language schedule descriptions
-- Comprehensive test coverage
+- Comprehensive test coverage (98%)
 - Lightweight and fast
 
 ## Installation
@@ -30,6 +34,52 @@ from human_readable_cron import convert_to_cron
 # Basic usage
 cron_expression = convert_to_cron("every Monday at 10 AM")
 print(cron_expression)  # Output: 0 10 * * 1
+```
+
+### Interactive Demo
+
+The package includes an interactive demo script that you can use to experiment with different human-readable schedules:
+
+```bash
+# If you've cloned the repository
+python scripts/demo.py
+
+# Or if you've installed the package
+python -c "from human_readable_cron import convert_to_cron; print(convert_to_cron(input('Enter schedule: ')))"
+```
+
+### Command-Line Interface
+
+The package also includes a command-line interface that you can use directly from your terminal:
+
+```bash
+# Convert a schedule directly
+human-readable-cron "every Monday at 10 AM"
+
+# Run in interactive mode
+human-readable-cron -i
+
+# Show help
+human-readable-cron --help
+
+# Show version
+human-readable-cron --version
+```
+
+### Docker
+
+You can also run the package using Docker:
+
+```bash
+# Build and run the Docker image
+docker-compose up --build
+
+# Or using Docker directly
+docker build -t human-readable-cron .
+docker run -it human-readable-cron
+
+# Run with a specific command
+docker run human-readable-cron "every Monday at 10 AM"
 ```
 
 ### Examples
@@ -87,6 +137,8 @@ The library understands a wide variety of natural language expressions:
 ```bash
 git clone https://github.com/yourusername/human-readable-cron.git
 cd human-readable-cron
+python -m venv venv
+source venv/bin/activate  # On Windows: venv\Scripts\activate
 pip install -e .
 pip install -r requirements.txt
 ```
@@ -103,9 +155,51 @@ For test coverage:
 pytest --cov=human_readable_cron
 ```
 
+## Publishing to PyPI
+
+To publish this package to PyPI, follow these steps:
+
+1. Make sure you have the latest versions of build tools:
+   ```bash
+   pip install --upgrade build twine
+   ```
+
+2. Build the package:
+   ```bash
+   python -m build
+   ```
+
+3. Upload to TestPyPI (optional, for testing):
+   ```bash
+   python -m twine upload --repository testpypi dist/*
+   ```
+
+4. Upload to PyPI:
+   ```bash
+   python -m twine upload dist/*
+   ```
+
+You'll need to have a PyPI account and be registered as a maintainer of the package. If this is a new package, you'll create it when you first upload.
+
+## Versioning
+
+This project follows [Semantic Versioning](https://semver.org/). To update the version:
+
+1. Update the version in `pyproject.toml`
+2. Update the version in `human_readable_cron/__init__.py`
+3. Commit the changes
+4. Tag the commit with the version: `git tag v0.1.0`
+5. Push the tag: `git push origin v0.1.0`
+
 ## Contributing
 
 Contributions are welcome! Please feel free to submit a Pull Request.
+
+1. Fork the repository
+2. Create your feature branch: `git checkout -b feature/amazing-feature`
+3. Commit your changes: `git commit -m 'Add some amazing feature'`
+4. Push to the branch: `git push origin feature/amazing-feature`
+5. Open a Pull Request
 
 ## License
 

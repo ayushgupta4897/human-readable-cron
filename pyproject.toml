@@ -1,0 +1,35 @@
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "human-readable-cron"
+version = "0.1.0"
+description = "A lightweight utility for converting human-readable schedules to cron expressions"
+readme = "README.md"
+authors = [
+    {name = "Aayush Gupta", email = "ayushgupta4897@gmail.com"}
+]
+license = {text = "MIT"}
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.6",
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: Utilities",
+]
+keywords = ["cron", "schedule", "time", "parser", "utility"]
+requires-python = ">=3.6"
+
+[project.urls]
+"Homepage" = "https://github.com/ayushgupta4897/human-readable-cron"
+"Bug Tracker" = "https://github.com/ayushgupta4897/human-readable-cron/issues"
+"Documentation" = "https://github.com/ayushgupta4897/human-readable-cron#readme"
+
+[project.scripts]
+human-readable-cron = "human_readable_cron.cli:main" 
