@@ -1,3 +1,34 @@
+Metadata-Version: 2.2
+Name: human-readable-cron
+Version: 0.1.0
+Summary: A lightweight utility for converting human-readable schedules to cron expressions
+Home-page: https://github.com/yourusername/human-readable-cron
+Author: Aayush Gupta
+Author-email: your.email@example.com
+Keywords: cron,schedule,time,parser,utility
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Utilities
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: keywords
+Dynamic: requires-python
+Dynamic: summary
+
 # Human Readable Cron
 
 [![PyPI version](https://img.shields.io/pypi/v/human-readable-cron.svg)](https://pypi.org/project/human-readable-cron/)
